@@ -16,7 +16,7 @@ script_path = 'coinPrice_single.py'
 # 定义一个函数，用于执行脚本
 def execute_script(script_path,params,height):
     try:
-        command = ["python", script_path, params, height]
+        command = ["venv/Scripts/python", script_path, params, height]
         subprocess.run(command, check=True)
         print(f"执行成功: {' '.join(params)}")
     except Exception as e:
